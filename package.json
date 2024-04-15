@@ -1,0 +1,25 @@
+{
+  "name": "string-protocol-smart-contract",
+  "version": "1.0.0",
+  "description": "This project aims to develop a decentralized application (DApp) for minting non-fungible tokens (NFTs) representing unique guitars on a blockchain network. The smart contract will facilitate the creation and management of these NFTs, allowing users to authenticate and trade digital representations of guitars securely and transparently. Leveraging blockchain technology ensures authenticity, ownership, and scarcity of each guitar NFT, providing a novel and innovative way for guitar enthusiasts to collect and trade their favorite instruments in the digital realm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx hardhat compile",
+    "deploy:polygon": "npx hardhat run src/scripts/deploy.js --network polygon",
+    "deploy:amoy": "npx hardhat run src/scripts/deploy.js --network polygonAmoy",
+    "verify:amoy": "npx hardhat verify $npm_config_address --network polygonAmoy",
+    "verify:polygon": "npx hardhat verify $npm_config_address --network polygon"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "hardhat": "^2.22.2",
+    "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5"
+  }
+}
